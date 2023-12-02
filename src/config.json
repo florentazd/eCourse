@@ -1,0 +1,35 @@
+{
+  "logo": "/logo.svg",
+  "logo_text": "eCourse",
+
+  "tech_stack_visible": true,
+
+  "tech_stack": [
+    { "name": "Svelte", "icon": "/svelte.svg" },
+    { "name": "Tailwind", "icon": "/tailwind.svg" },
+    { "name": "PocketBase", "icon": "/pocketbase.svg" }
+  ],
+
+  "links": [
+    { "name": "Community", "url": "http://google.com/" },
+    { "name": "Coaching", "url": "http://google.com/" },
+    { "name": "Merchandise", "url": "http://google.com/" },
+    { "name": "Mentors", "url": "http://google.com/" }
+  ],
+
+  "hero": {
+    "headline": "Create, Manage, and Host Your Online Course Seamlessly",
+    "video": "/ecourse-demo.mp4",
+    "video_captions": "/captions.vtt"
+  },
+
+  "curriculum": {
+    "headline": "The Curriculum",
+    "subheading": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur, quo vitae fugiat delectus reiciendis quae odit? Veniam laboriosam natus at."
+  },
+
+  "cta": {
+    "primary": "Get Access",
+    "secondary": "View Curriculum"
+  }
+}

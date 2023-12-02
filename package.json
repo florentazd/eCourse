@@ -1,0 +1,29 @@
+{
+  "name": "ecourse",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@iconify/svelte": "^3.1.4",
+    "@sveltejs/vite-plugin-svelte": "^3.0.0",
+    "autoprefixer": "^10.4.16",
+    "postcss": "^8.4.31",
+    "postcss-pxtorem": "^6.0.0",
+    "prettier": "^3.1.0",
+    "prettier-plugin-svelte": "^3.1.0",
+    "prettier-plugin-tailwindcss": "^0.5.7",
+    "svelte": "^4.2.3",
+    "svelte-routing": "^2.6.0",
+    "tailwindcss": "^3.3.5",
+    "vite": "^5.0.0"
+  },
+  "dependencies": {
+    "plyr": "^3.7.8",
+    "pocketbase": "^0.19.0"
+  }
+}
