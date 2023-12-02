@@ -1,15 +1,15 @@
 # eCourse
 
+A sleek and customizable website template designed for effortless self-hosting of your online course. this template provides a user-friendly foundation for educators and content creators to showcase their expertise.
+
+![eCourse](https://github.com/Ilyas-Codes/eCourse/blob/main/client/public/ecourse.jpg)
+
 [Demo](https://e-course.pages.dev/)
 
 Use the following credentials for testing the demo:
 
 **Username:** `admin`  
 **Password:** `ecourseadmin`
-
-![Lighthouse](https://github.com/Ilyas-Codes/eCourse/blob/main/client/public/lighthouse.jpg)
-
-eCourse is a sleek and customizable website template designed for effortless self-hosting of your online course. this template provides a user-friendly foundation for educators and content creators to showcase their expertise in a personalized digital environment.
 
 ## Tech Stack
 
