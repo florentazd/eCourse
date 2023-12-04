@@ -52,7 +52,7 @@
     {:else}
       {#each $lessons as lesson (lesson.id)}
         {#if toSlug(lesson.title) === toSlug(lessonTitle)}
-          <section class="flex-1 space-y-5 overflow-y-scroll bg-dark p-5">
+          <section class="bg-dark flex-1 space-y-5 overflow-y-scroll p-5">
             <button
               on:click={() => navigate("/course")}
               class="flex items-center gap-2 text-white/50 transition hover:text-white"
@@ -90,7 +90,7 @@
                 }}
                 class={$isLessonComplete[lesson.id]
                   ? "rounded-md bg-white/10 px-4 py-2 outline outline-[1.5px] outline-white/20 transition hover:bg-white/20 sm:w-full sm:px-0"
-                  : "rounded-md bg-main px-4 py-2 transition hover:bg-main/80 sm:w-full sm:px-0"}
+                  : "bg-main hover:bg-main/80 rounded-md px-4 py-2 transition sm:w-full sm:px-0"}
               >
                 {$isLessonComplete[lesson.id]
                   ? "Reset status"
@@ -105,21 +105,27 @@
                 }
               }}
               id="lessonVideo"
-              data-poster={`${import.meta.env.VITE_PB_URL}/api/files/lessons/${
-                lesson.id
-              }/${lesson.thumbnail}`}
+              data-poster={`${
+                import.meta.env.DEV
+                  ? import.meta.env.VITE_DEV_PB_URL
+                  : import.meta.env.VITE_PROD_PB_URL
+              }/api/files/lessons/${lesson.id}/${lesson.thumbnail}`}
             >
               <source
-                src={`${import.meta.env.VITE_PB_URL}/api/files/lessons/${
-                  lesson.id
-                }/${lesson.video}`}
+                src={`${
+                  import.meta.env.DEV
+                    ? import.meta.env.VITE_DEV_PB_URL
+                    : import.meta.env.VITE_PROD_PB_URL
+                }/api/files/lessons/${lesson.id}/${lesson.video}`}
               />
               <track
                 kind="captions"
                 label="English captions"
-                src={`${import.meta.env.VITE_PB_URL}/api/files/lessons/${
-                  lesson.id
-                }/${lesson.captions}`}
+                src={`${
+                  import.meta.env.DEV
+                    ? import.meta.env.VITE_DEV_PB_URL
+                    : import.meta.env.VITE_PROD_PB_URL
+                }/api/files/lessons/${lesson.id}/${lesson.captions}`}
                 srclang="en"
                 default
               />
@@ -197,9 +203,11 @@
                 </h2>
                 {#each lesson.downloads as download}
                   <a
-                    href={`${import.meta.env.VITE_PB_URL}/api/files/lessons/${
-                      lesson.id
-                    }/${download}`}
+                    href={`${
+                      import.meta.env.DEV
+                        ? import.meta.env.VITE_DEV_PB_URL
+                        : import.meta.env.VITE_PROD_PB_URL
+                    }/api/files/lessons/${lesson.id}/${download}`}
                     download
                     class="block w-full rounded-md bg-white/10 p-2 outline outline-[1.5px] outline-white/20 transition hover:bg-white/20"
                   >
