@@ -33,6 +33,13 @@ The easiest way to get started is to run this project locally, simply run the fo
 # Clone this repository
 git clone https://github.com/Ilyas-Codes/eCourse.git
 
+# Ignore the 'server' directory in Git
+cd eCourse
+echo "server" > .gitignore
+git rm -r --cached server
+git add .gitignore
+git commit -m "Ignore the 'server' directory"
+
 # Start the PocketBase server
 cd server
 ./pocketbase serve
@@ -54,6 +61,8 @@ The PocketBase backend can basically be treated as a CMS for managing your cours
 ## Deployment
 
 The most straightforward method to deploy eCourse is by running the command `npm run build` in the `client` directory. This command spits out a `dist` folder containing an optimized and production-ready bundle. after that, you can create a `pb_public` directory within the `server` directory and place the contents of the `dist` folder inside of there. With these steps completed, you are now ready to deploy your entire application, encompassing both the frontend and backend, on any cloud service provider. For those seeking free alternatives, consider [PocketHost](https://pockethost.io/) and [Fly.io](https://fly.io/).
+
+Make sure to replace the `VITE_PROD_PB_URL` env variable in the `.env` file within the `client` directory with the production server URL where your PocketBase instance is hosted.
 
 ## Feedback & Suggestions
 
